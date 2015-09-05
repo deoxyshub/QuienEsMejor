@@ -1,0 +1,164 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>¿Quién es mejor?</title>
+
+    <link href="../css/bootstrap.min.css" rel="stylesheet" />
+    <link href="../css/bootstrap-responsive.min.css" rel="stylesheet" />
+    <link href="../css/custom.css" rel="stylesheet" />
+    <link rel="shortcut icon" href="../ico/favicon.ico" />
+</head>
+<body>
+    <div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="navbar-inner">
+            <div class="container-fluid">
+                <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </a>
+                <a class="brand" href="#">¿Quién es mejor?</a>
+                <div class="nav-collapse collapse">
+                    <p class="navbar-text pull-right">Conectado como <a href="#" class="navbar-link">JMorales</a></p>
+                    <ul class="nav">
+                        <li class="active"><a href="#">Inicio</a></li>
+                        <li><a href="#about">Acerca de</a></li>
+                    </ul>
+                </div><!--/.nav-collapse -->
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="page-header">
+            <div class="pull-right">
+                <ul class="page-header-links">
+                    <li><a href="#">perfil</a></li>
+                    <li><a href="#">cambio de clave</a></li>
+                    <li><a href="#">cerrar sesión</a></li>
+                </ul>
+            </div>
+            <div class="pull-left"><img src="../img/dreamstimefree.jpg" alt="dreams time free" width="100" height="100" /></div>
+            <h1>Mis torneos</h1>
+        </div> <!-- /page header -->
+        <div class="btn-toolbar pull-right">
+            <div class="btn-group">
+                <button class="btn btn-small" type="button">Contendores</button>
+            </div>
+            <div class="btn-group">
+                <button class="btn btn-small" type="button">Reporte</button>
+                <button class="btn btn-small dropdown-toggle" data-toggle="dropdown">
+                    <span class="caret"></span>
+                </button>
+                <ul class="dropdown-menu">
+                    <li><a href="#">Torneo</a></li>
+                    <li><a href="#">Efectividad</a></li>
+                </ul>
+            </div>
+        </div> <!-- /additional action buttons -->
+        <table class="table table-bordered table-striped">
+            <thead>
+                <tr>
+                    <td><input type="checkbox" id="chkSelectAll" value="option1" /></td>
+                    <th>Torneo</th>
+                    <th>Tipo</th>
+                    <th>Cant. Part.</th>
+                    <th>Contendores</th>
+                    <th>Fecha Inicio</th>
+                    <th>Fecha Fin</th>
+                    <th>Estado</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><input type="checkbox" id="chkSelect0" value="option1" /></td>
+                    <td>Equipo favorito de lo peruanos</td>
+                    <td>Imagen</td>
+                    <td>1500</td>
+                    <td>8</td>
+                    <td>01/10/2012</td>
+                    <td>01/12/2012</td>
+                    <td><span class="label">En curso</span></td>
+                </tr>
+                <tr>
+                    <td><input type="checkbox" id="chkSelect1" value="option1" /></td>
+                    <td>Logo de la empresa</td>
+                    <td>Imagen</td>
+                    <td>150</td>
+                    <td>8</td>
+                    <td>01/01/2012</td>
+                    <td>01/03/2012</td>
+                    <td><span class="label label-success">Finalizado</span></td>
+                </tr>
+                <tr>
+                    <td><input type="checkbox" id="Checkbox1" value="option1" /></td>
+                    <td>Lugar para la cena de fin de año</td>
+                    <td>Texto</td>
+                    <td>160</td>
+                    <td>16</td>
+                    <td>01/05/2012</td>
+                    <td>01/06/2012</td>
+                    <td><span class="label label-success">Finalizado</span></td>
+                </tr>
+            </tbody>
+        </table> <!-- /grid list -->
+        <div class="pagination pagination-centered">
+            <ul>
+                <li class="disabled"><a href="#">«</a></li>
+                <li class="active"><a href="#">1</a></li>
+                <li><a href="#">2</a></li>
+                <li><a href="#">3</a></li>
+                <li><a href="#">4</a></li>
+                <li><a href="#">»</a></li>
+            </ul>
+        </div> <!-- /pagination -->
+        <div class="btn-toolbar pull-right">
+            <a href="AdministrarTorneo.html" class="btn btn-small btn-primary" type="button" id="add">Agregar</a>
+            <a href="AdministrarTorneo.html" class="btn btn-small btn-primary" type="button" id="edit">Modificar</a>
+            <button class="btn btn-small btn-primary" type="button" id="delete">Eliminar</button>
+        </div> <!-- /buttons maintenance -->
+    </div> <!-- /container -->
+    <footer class="footer">
+        <div class="container">
+            <p class="pull-right"><a href="#">Ir arriba</a></p>
+            <p>Designed and built by the team <b>JWarrior</b></p>
+            <ul class="footer-links">
+                <li><a href="jmorales0786@gmail.com">Jhonny Morales</a></li>
+                <li><a href="rvaccarim@gmail.com">Roberto Vaccari</a></li>
+                <li><a href="jlcr2886@gmail.com">Jorge Cotrina</a></li>
+                <li><a href="d.angeles.trujillo@gmail.com">Dennys Angeles</a></li>
+            </ul>
+        </div>
+    </footer> <!-- /footer -->
+
+    <div class="modal hide fade" id="myModal">
+        <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+            <h3>Alert!</h3>
+        </div>
+        <div class="modal-body">
+            <p>¿Está seguro de eliminar el torneo?</p>
+        </div>
+        <div class="modal-footer">
+            <a href="#" class="btn">Cancelar</a>
+            <a href="#" class="btn btn-primary">Aceptar</a>
+        </div>
+    </div><!-- /modal dialog -->
+
+
+    <!-- javascript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="../js/jquery/jquery.js"></script>
+    <script src="../js/bootstrap-modal.js"></script>
+    <script src="../js/bootstrap-dropdown.js"></script>
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $("#delete").bind("click", function () {
+                $('#myModal').modal('show')
+            });
+        });
+    </script>
+</body>
+</html>

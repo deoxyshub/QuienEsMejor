@@ -1,0 +1,113 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>¿Quién es mejor?</title>
+
+    <link href="../css/bootstrap.min.css" rel="stylesheet" />
+    <link href="../css/bootstrap-responsive.min.css" rel="stylesheet" />
+    <link href="../css/ui-lightness/jquery-ui.css" rel="stylesheet" />
+    <link href="../css/custom.css" rel="stylesheet" />
+    <link rel="shortcut icon" href="../ico/favicon.ico" />
+    <style type="text/css">
+        form div {text-align:center; margin-top: 25px;}
+        form div img {margin-top: 5px;}
+    </style>
+</head>
+<body>
+    <div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="navbar-inner">
+            <div class="container-fluid">
+                <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </a>
+                <a class="brand" href="#">¿Quién es mejor?</a>
+                <div class="nav-collapse collapse">
+                    <p class="navbar-text pull-right">Conectado como <a href="#" class="navbar-link">JMorales</a></p>
+                    <ul class="nav">
+                        <li class="active"><a href="#">Inicio</a></li>
+                        <li><a href="#about">Acerca de</a></li>
+                    </ul>
+                </div><!--/.nav-collapse -->
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="page-header">
+            <div class="pull-right">
+                <ul class="page-header-links">
+                    <li><a href="ConsultarTorneos.html">volver a Mis torneos</a></li>
+                    <li><a href="#">cerrar sesión</a></li>
+                </ul>
+            </div>
+            <div class="pull-left"><img src="../img/dreamstimefree.jpg" alt="dreams time free" width="100" height="100" /></div>
+            <h1>Vota por tu favorito</h1>
+        </div> <!-- /page header -->
+        <br />
+        <form class="form-horizontal form-actions">
+            <p><strong>Torneo:&nbsp;</strong><span id="Torneo">El mejor logo para el F.C. Barcelona</span></p>
+            <div class="span2">
+                Opción&nbsp;1:&nbsp;<span id="opt1">Logo amarillo</span>
+                <img src="http://placehold.it/140x140" alt="logo amarillo" class="img-polaroid" style="background-color: Yellow; " />
+                <label for="marcaOpt1" class="radio inline"><input type="radio" id="marcaOpt1" name="marcaOpt" />Marca</label>
+            </div>
+            <div class="span1" style="margin-top: 120px; ">
+                VS
+            </div>
+            <div class="span2">
+                Opción&nbsp;2:&nbsp;<span id="opt2">Logo&nbsp;turquesa</span>
+                <img src="http://placehold.it/140x140" alt="logo turquesa" class="img-polaroid" style="background-color: #30D5C8;" />
+                <label for="marcaOpt2" class="radio inline"><input type="radio" id="marcaOpt2" name="marcaOpt"/>Marca</label>
+            </div>
+            <div class="span6">
+                <label>Etapa Actual</label>
+                <center>
+                <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu" style="display: block; position: static; margin-bottom: 5px; width: 180px; text-align: left; float: none;">
+                    <li class="disabled" style="padding-left: 5px;">Cuartos de final</li>
+                    <li><a tabindex="-1" href="#">- Opción 1 vs Opción 2</a></li>
+                    <li><a tabindex="-1" href="#">- Opción 3 vs Opción 4</a></li>
+                    <li><a tabindex="-1" href="#">- Opción 5 vs Opción 6</a></li>
+                    <li><a tabindex="-1" href="#">- Opción 7 vs Opción 8</a></li>
+                </ul>
+                </center>
+            </div>
+            <br style="clear: both;" />
+            <div class="span5">
+                <p>Marca la opción que prefieras</p>
+                <div class="btn-toolbar">
+                    <button class="btn btn-small btn-primary" type="button" id="confirm">Confirmar - Siguiente Duelo</button>
+                </div> <!-- /buttons maintenance -->
+            </div>
+
+        </form>
+    </div> <!-- /container -->
+    <footer class="footer">
+        <div class="container">
+            <p class="pull-right"><a href="#">Ir arriba</a></p>
+            <p>Designed and built by the team <b>JWarrior</b></p>
+            <ul class="footer-links">
+                <li><a href="jmorales0786@gmail.com">Jhonny Morales</a></li>
+                <li><a href="rvaccarim@gmail.com">Roberto Vaccari</a></li>
+                <li><a href="jlcr2886@gmail.com">Jorge Cotrina</a></li>
+                <li><a href="d.angeles.trujillo@gmail.com">Dennys Angeles</a></li>
+            </ul>
+        </div>
+    </footer> <!-- /footer -->
+
+    <!-- javascript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="../js/jquery/jquery.js"></script>
+    <script src="../js/jquery/jquery-ui.js"></script>
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $("#confirm").bind("click", function () {
+                alert("No implementado!")
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,32 @@
+﻿@import url(/c/bracket_nba.css);
+
+
+/*----------------------------------------------------- header */
+
+/* span { display: none; } seed set to OFF */
+
+/* 2nd round */
+#west .div1 { left: 90px; top: 25px; } /* lal */
+#west .div2 { left: 90px; top: -25px; } /* hou */
+#west .div3 { left: 90px; top: -25px; } /* dal */
+#west .div4 { left: 90px; top: 25px; } /* den */
+
+#east .div1 { left: -90px; top: 25px; } /* cle */
+#east .div2 { left: -90px; top: 25px; } /* atl */
+#east .div3 { left: -90px; top: 25px; } /* orl */
+#east .div4 { left: -90px; top: 25px; } /* bos */
+
+/* conf finals */
+#west .conf1 { left: 80px; top: 50px; } /* lal 175x75 */
+#west .conf2 { left: 80px; top: -50px; } /* den 175x275 */
+
+#east .conf1 { left: -80px; top: 50px; } /* cle */
+#east .conf2 { left: -80px; top: 50px; } /* orl */
+
+/* finals */
+#west .finalswest { left: 95px; top: 100px; } /* lal 265x175 */
+#east .finalseast { left: -95px; top: -100px; } /* orl */
+
+/* champ */
+#west .champwest { left: 55px; top: 25px; } /* 320x200 */
+

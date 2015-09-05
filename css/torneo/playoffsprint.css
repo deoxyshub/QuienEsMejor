@@ -1,0 +1,213 @@
+﻿ul#alsoview, div#bracketfoot, div#playoffbracket strong, div#playoffbracket span, div#playoffbracket p, div#updates, div#advertisement, div#newbracket, div#brackethelp, div#times, h2, div#season {
+	display: none !important;
+}
+div#playoffbracket img.bracketBG {
+	width: 700px;
+	height: 401px;
+}
+div#brackethead h1, div#copyright {
+	font-family: verdana;
+	font-size: 10px;
+	text-align: center;
+	padding: 5px auto;
+}
+div#brackethead h1 {
+	font-size: 12px;
+}
+
+div#playoffbracket {
+	width: 700px;
+	height: 401px;
+	/*background: transparent;*/
+	position: relative;
+	margin: 10px auto;
+}
+div#playoffbracket ol, div#playoffbracket ul {
+	padding: 0;
+	margin: 0;
+}
+ol#east li, ol#west li {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	position: absolute;
+}
+
+div#playoffbracket ol li ul li {
+	left: 95px;
+	top: 25px;
+}
+div#playoffbracket ol#east li ul li {
+	left: -90px;
+}
+
+div#playoffbracket ol li ul li ul li {
+	top: 50px;
+	left: 83px;
+}
+
+body#playoffs2009 div#playoffbracket ol#west li.five ul.roundtwo li, body#playoffs2009 div#playoffbracket ol#west li.six ul.roundtwo li { /* Houston and Dallas advance */
+	top: -25px;
+}
+
+/*west conf finals btm*/
+div#playoffbracket ol li ul li.bracket4 ul li {
+	top: -50px;
+}
+body#playoffs2009 div#playoffbracket ol#west li.two ul.roundtwo li ul.conffinals li { top: -50px; }
+
+/*West champ*/
+div#playoffbracket ol li ul li ul li ul li {
+	top: 100px;
+	left: 90px;
+}
+
+body#playoffs2009 div#playoffbracket ol li.three ul li ul li ul li {
+	top: -100px;
+}
+
+/*NBA champ*/
+div#playoffbracket ol li ul li ul li ul li ul li {
+	top: 50px;
+	left: 57px;
+}
+
+
+ul#west_out, ul#east_out {
+	display: none;
+}
+
+li.one {
+	top: 0;
+}
+li.eight {
+	top: 50px;
+}
+li.four {
+	top: 100px;
+}
+li.five {
+	top: 150px;
+}
+li.two {
+	top: 300px;
+}
+li.seven {
+	top: 350px;
+}
+li.three {
+	top: 200px;
+}
+li.six {
+	top: 250px;
+}
+ol#east li {
+	right: 0;
+}
+
+ol#west li img, ol#east li img {
+	width: 50px;
+	border: none;
+}
+
+/* --------------------- EAST */
+ol#east li.pistons img {
+	height: 43px;
+}
+ol#east li.wizards img {
+	height: 37px;
+}
+ol#east li.bulls img {
+	height: 45px;
+}
+ol#east li.raptors img {
+	height: 44px;
+}
+ol#east li.cavaliers img {
+	height: 26px;
+	position: relative;
+	top: 10px;
+}
+ol#east li.pacers img {
+	height: 42px;
+}
+ol#east li.magic img {
+	height: 35px;
+}
+ol#east li.heat img {
+	height: 69px;
+}
+ol#east li.nets img {
+	height: 55px;
+}
+ol#east li.knicks img {
+	height: 40px;
+}
+ol#east li.bucks img {
+	height: 69px;
+}
+ol#east li.hawks img {
+	height: 27px;
+	position: relative;
+	top: 10px;
+}
+ol#east li.bobcats img {
+	height: 37px;
+}
+ol#east li.sixers img {
+	height: 60px;
+}
+ol#east li.celtics img {
+	height: 55px;
+}
+
+/* --------------------- WEST */
+ol#west li.mavericks img {
+	height: 52px;
+}
+ol#west li.suns img {
+	height: 51px;
+}
+ol#west li.spurs img {
+	height: 26px;
+	position: relative;
+	top: 10px;
+}
+ol#west li.jazz img {
+	height: 37px;
+}
+ol#west li.rockets img {
+	height: 66px;
+}
+ol#west li.lakers img {
+	height: 31px;
+	position: relative;
+	top: 10px;
+}
+ol#west li.clippers img {
+	height: 36px;
+}
+ol#west li.nuggets img {
+	height: 35px;
+}
+ol#west li.timberwolves img {
+	height: 38px;
+}
+ol#west li.warriors img {
+	height: 48px;
+}
+ol#west li.hornets img {
+	height: 54px;
+}
+ol#west li.kings img {
+	height: 61px;
+}
+ol#west li.blazers img {
+	height: 55px;
+}
+ol#west li.grizzlies img {
+	height: 62px;
+}
+ol#west li.thunder img {
+	height: 50px;
+}

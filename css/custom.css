@@ -1,0 +1,70 @@
+﻿/* Overrides
+-------------------------------------------------- */
+
+body { 
+    padding-top: 60px; 
+}
+.sidebar-nav { 
+    padding: 9px 0; 
+}
+.pagination { 
+    margin: 0; 
+}
+
+/* Header
+-------------------------------------------------- */
+
+.page-header-links {
+  margin: 10px 0;
+}
+.page-header-links li {
+  display: inline;
+  margin-right: 10px;
+}
+
+/* Footer
+-------------------------------------------------- */
+
+.footer {
+  padding: 30px 0;
+  margin-top: 80px;
+  border-top: 1px solid #e5e5e5;
+  background-color: #f5f5f5;
+}
+.footer p {
+  margin-bottom: 0;
+  color: #777;
+}
+.footer-links {
+  margin: 10px 0;
+}
+.footer-links li {
+  display: inline;
+  margin-right: 10px;
+}
+
+/* NumericUpDownControl
+-------------------------------------------------- */
+.numericupdown{}
+.val
+{
+	height: 18px;
+	margin:0px;
+	padding-top:0px;
+	padding-bottom:0px;
+	float:left;
+}
+.up
+{
+	border: 0px none white;
+	width:15px;
+	height:10px;
+	overflow:hidden;
+}
+.down
+{
+	border: 0px none white;
+	width:15px;
+	height:10px;
+	overflow:hidden;
+}

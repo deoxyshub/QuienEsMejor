@@ -1,0 +1,112 @@
+﻿@import url(/c/bracket_base.css);
+
+
+
+/*----------------------------------------------------- header */
+
+
+
+
+/*----------------------------------------------------- nav */
+
+
+
+
+/*----------------------------------------------------- BG, logo */
+
+#playoffbracket { background: url(img/bracketBG.png) no-repeat; }
+
+
+/*----------------------------------------------------- structure */
+
+ol#west span { right: 55px; }
+
+#west .one { left: 5px; top: 0; }
+#west .eight { left: 5px; top: 50px; }
+#west .four { left: 5px; top: 100px; }
+#west .five { left: 5px; top: 150px; }
+#west .three { left: 5px; top: 200px; }
+#west .six { left: 5px; top: 250px; }
+#west .two { left: 5px; top: 300px; }
+#west .seven { left: 5px; top: 350px; }
+
+#east .one { left: 645px; top: 0; }
+#east .eight { left: 645px; top: 50px; }
+#east .four { left: 645px; top: 100px; }
+#east .five { left: 645px; top: 150px; }
+#east .three { left: 645px; top: 200px; }
+#east .six { left: 645px; top: 250px; }
+#east .two { left: 645px; top: 300px; }
+#east .seven { left: 645px; top: 350px; }
+
+#playoffbracket div.finalswins { position: absolute; width: 34px; height: 65px; background: url(img/finalsbg.png) no-repeat; top: -8px; right: -35px; }
+#playoffbracket ol#west div.finalswins { right: 0; left: -35px; top: -6px; }
+#playoffbracket div.finalswins p { position: absolute; left: 0; width: 34px; height: 15px; margin: 0; }
+#playoffbracket div.finalswins p.win4, div.finalswins p.next4 { top: 0 !important; }
+#playoffbracket div.finalswins p.win3, div.finalswins p.next3 { top: 15px; }
+#playoffbracket div.finalswins p.win2, div.finalswins p.next2 { top: 30px !important; }
+#playoffbracket div.finalswins p.win1, div.finalswins p.next1 { height: 20px; top: 45px !important }
+#playoffbracket div.finalswins p.win1 a, div.finalswins p.next1 a { height: 20px; }
+#playoffbracket div.finalswins p.win4 a, #playoffbracket div.finalswins p.win3 a, div.finalswins p.next3 a, #playoffbracket div.finalswins p.win2 a, div.finalswins p.next2 a { height: 15px; }
+#playoffbracket div.finalswins p.win1 { background: url(img/fwin1.png) no-repeat; }
+#playoffbracket div.finalswins p.win2 { background: url(img/fwin2.png) no-repeat; }
+#playoffbracket div.finalswins p.win3 { background: url(img/fwin3.png) no-repeat; }
+#playoffbracket div.finalswins p.win4 { background: url(img/fwin4.png) no-repeat; }
+#playoffbracket div.finalswins p.win1, div.finalswins p.win2, div.finalswins p.win3 { border-top: 1px dotted #999; }
+
+
+
+/*----------------------------------------------------- other content (ads, news) */
+
+
+
+
+/* ---------------------------------------------------- season graph */
+
+div#season { background: url(img/nbaseasonBG.png) left center; }
+
+
+/*----------------------------------------------------- footer */
+
+
+
+
+/*----------------------------------------------------- other */
+
+/* east */
+.pistons { background: url(img/det.gif) no-repeat; }
+.wizards { background: url(img/was.gif) no-repeat; }
+.bulls { background: url(img/chi.gif) no-repeat; }
+.raptors { background: url(img/tor.gif) no-repeat; }
+.cavaliers { background: url(img/cle.gif) no-repeat; }
+.pacers { background: url(img/ind.gif) no-repeat; }
+.magic { background: url(img/orl.png) no-repeat; }
+.heat { background: url(img/mia.gif) no-repeat; }
+.nets { background: url(img/njn.gif) no-repeat; }
+.knicks { background: url(img/nyk.gif) no-repeat; }
+.bucks { background: url(img/mil.gif) no-repeat; }
+.hawks { background: url(img/atl.gif) no-repeat; }
+.bobcats { background: url(img/cha.gif) no-repeat; }
+.sixers { background: url(img/phi.png) no-repeat; }
+.celtics { background: url(img/bos.gif) no-repeat; }
+
+body#playoffs2008 ol#east .champeast { background: url(img/bos08champs.png) no-repeat; width: 53px; height: 58px; }
+
+/* west */
+.mavericks { background: url(img/dal.gif) no-repeat; }
+.suns { background: url(img/pho.gif) no-repeat; }
+.spurs { background: url(img/sas.gif) no-repeat; }
+.jazz { background: url(img/uth.png) no-repeat; }
+.rockets { background: url(img/hou.gif) no-repeat; }
+.lakers { background: url(img/lal.gif) no-repeat; }
+.clippers { background: url(img/lac.gif) no-repeat; }
+.nuggets { background: url(img/den.png) no-repeat; }
+.timberwolves { background: url(img/min.gif) no-repeat; }
+.warriors { background: url(img/gsw.png) no-repeat; }
+.hornets { background: url(img/nor.png) no-repeat; }
+.kings { background: url(img/sac.gif) no-repeat; }
+.blazers { background: url(img/por.gif) no-repeat; }
+.thunder { background: url(img/okc.gif) no-repeat; }
+.grizzlies { background: url(img/mem.gif) no-repeat; }
+
+body#playoffs2007 .champwest { background: url(img/sas07champs.png) no-repeat; }
