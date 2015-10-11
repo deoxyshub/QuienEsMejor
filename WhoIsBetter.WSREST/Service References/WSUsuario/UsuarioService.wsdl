@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="UsuarioService" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsp:Policy wsu:Id="CustomBinding_IUsuarioService_policy">
+    <wsp:ExactlyOne>
+      <wsp:All>
+        <msb:BinaryEncoding xmlns:msb="http://schemas.microsoft.com/ws/06/2004/mspolicy/netbinary1" />
+        <wsaw:UsingAddressing />
+      </wsp:All>
+    </wsp:ExactlyOne>
+  </wsp:Policy>
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://localhost/WhoIsBetter_WSSOAP/UsuarioService.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://localhost/WhoIsBetter_WSSOAP/UsuarioService.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost/WhoIsBetter_WSSOAP/UsuarioService.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/WhoIsBetter.Entity" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IUsuarioService_CrearUsuario_InputMessage">
+    <wsdl:part name="parameters" element="tns:CrearUsuario" />
+  </wsdl:message>
+  <wsdl:message name="IUsuarioService_CrearUsuario_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CrearUsuarioResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUsuarioService_ObtenerUsuarioPorID_InputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerUsuarioPorID" />
+  </wsdl:message>
+  <wsdl:message name="IUsuarioService_ObtenerUsuarioPorID_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerUsuarioPorIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUsuarioService_ObtenerUsuarioPorCorreo_InputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerUsuarioPorCorreo" />
+  </wsdl:message>
+  <wsdl:message name="IUsuarioService_ObtenerUsuarioPorCorreo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerUsuarioPorCorreoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUsuarioService_ActualizarUsuario_InputMessage">
+    <wsdl:part name="parameters" element="tns:ActualizarUsuario" />
+  </wsdl:message>
+  <wsdl:message name="IUsuarioService_ActualizarUsuario_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ActualizarUsuarioResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUsuarioService_EliminarUsuario_InputMessage">
+    <wsdl:part name="parameters" element="tns:EliminarUsuario" />
+  </wsdl:message>
+  <wsdl:message name="IUsuarioService_EliminarUsuario_OutputMessage">
+    <wsdl:part name="parameters" element="tns:EliminarUsuarioResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUsuarioService_ListarUsuarios_InputMessage">
+    <wsdl:part name="parameters" element="tns:ListarUsuarios" />
+  </wsdl:message>
+  <wsdl:message name="IUsuarioService_ListarUsuarios_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ListarUsuariosResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IUsuarioService">
+    <wsdl:operation name="CrearUsuario">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUsuarioService/CrearUsuario" message="tns:IUsuarioService_CrearUsuario_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUsuarioService/CrearUsuarioResponse" message="tns:IUsuarioService_CrearUsuario_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerUsuarioPorID">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUsuarioService/ObtenerUsuarioPorID" message="tns:IUsuarioService_ObtenerUsuarioPorID_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUsuarioService/ObtenerUsuarioPorIDResponse" message="tns:IUsuarioService_ObtenerUsuarioPorID_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerUsuarioPorCorreo">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUsuarioService/ObtenerUsuarioPorCorreo" message="tns:IUsuarioService_ObtenerUsuarioPorCorreo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUsuarioService/ObtenerUsuarioPorCorreoResponse" message="tns:IUsuarioService_ObtenerUsuarioPorCorreo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ActualizarUsuario">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUsuarioService/ActualizarUsuario" message="tns:IUsuarioService_ActualizarUsuario_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUsuarioService/ActualizarUsuarioResponse" message="tns:IUsuarioService_ActualizarUsuario_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="EliminarUsuario">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUsuarioService/EliminarUsuario" message="tns:IUsuarioService_EliminarUsuario_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUsuarioService/EliminarUsuarioResponse" message="tns:IUsuarioService_EliminarUsuario_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ListarUsuarios">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUsuarioService/ListarUsuarios" message="tns:IUsuarioService_ListarUsuarios_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUsuarioService/ListarUsuariosResponse" message="tns:IUsuarioService_ListarUsuarios_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="CustomBinding_IUsuarioService" type="tns:IUsuarioService">
+    <wsp:PolicyReference URI="#CustomBinding_IUsuarioService_policy" />
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="CrearUsuario">
+      <soap12:operation soapAction="http://tempuri.org/IUsuarioService/CrearUsuario" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerUsuarioPorID">
+      <soap12:operation soapAction="http://tempuri.org/IUsuarioService/ObtenerUsuarioPorID" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerUsuarioPorCorreo">
+      <soap12:operation soapAction="http://tempuri.org/IUsuarioService/ObtenerUsuarioPorCorreo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ActualizarUsuario">
+      <soap12:operation soapAction="http://tempuri.org/IUsuarioService/ActualizarUsuario" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EliminarUsuario">
+      <soap12:operation soapAction="http://tempuri.org/IUsuarioService/EliminarUsuario" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ListarUsuarios">
+      <soap12:operation soapAction="http://tempuri.org/IUsuarioService/ListarUsuarios" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="UsuarioService">
+    <wsdl:port name="CustomBinding_IUsuarioService" binding="tns:CustomBinding_IUsuarioService">
+      <soap12:address location="http://localhost/WhoIsBetter_WSSOAP/UsuarioService.svc" />
+      <wsa10:EndpointReference>
+        <wsa10:Address>http://localhost/WhoIsBetter_WSSOAP/UsuarioService.svc</wsa10:Address>
+      </wsa10:EndpointReference>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

@@ -1,0 +1,58 @@
+﻿<div class="alert alert-info">
+    <h2>Mis Torneos</h2>
+    <p class="row">
+        <a href="#/ModificarPerfil?idUsuario={{idUsuario}}" class="btn btn-link">modificar perfil</a>
+        <a href="#/CambiarClave?idUsuario={{idUsuario}}" class="btn btn-link">cambiar de clave</a>
+        <a href="#/IniciarSesion" class="btn btn-link">cerrar sesión</a>
+    </p>
+</div>
+<div ng-show="error" class="alert alert-danger">{{error}}</div>
+<form name="form" role="form">
+    <div class="btn-toolbar pull-left">
+        <a href="#/GestionarTorneo?idUsuario={{idUsuario}}&mode=new" class="btn btn-small btn-primary">agregar</a>
+    </div>
+    <div class="clearfix"></div>
+    <div class="form-group" style="margin-top: 5px;">
+        <table class="table table-bordered table-striped">
+            <thead>
+                <tr>
+                    <th style="width: 185px;"></th>
+                    <th>Torneo</th>
+                    <th style="width: 65px;">#Part.</th>
+                    <th style="width: 65px;">#Cont.</th>
+                    <th style="width: 102px;">Fecha Inicio</th>
+                    <th style="width: 102px;">Fecha Fin</th>
+                    <th style="width: 120px;">Estado</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="animate-repeat" ng-repeat="torneo in torneos">
+                    <td class="text-center">
+                        <a href="#/GestionarTorneo?idTorneo={{torneo.id}}&mode=edit" class="glyphicon glyphicon-edit" title="Modificar Torneo"></a>
+                        <span style="line-height: 16px; height: 12px; vertical-align: top;">&nbsp;|&nbsp;</span>
+                        <a class="glyphicon glyphicon-remove" style="cursor: pointer;" open-dialog="mymodal" data-entityid="{{torneo.id}}" title="Eliminar Torneo"></a>
+                        <span style="line-height: 16px; height: 12px; vertical-align: top;">&nbsp;|&nbsp;</span>
+                        <a href="#/Contendores?idTorneo={{torneo.id}}" title="Contendores">
+                            <span class="glyphicon glyphicon-user"></span>
+                            <span class="glyphicon glyphicon-user"></span>
+                        </a>
+                        <span ng-if="torneo.idEstado == 3" style="line-height: 16px; height: 12px; vertical-align: top;">&nbsp;|&nbsp;</span>
+                        <a ng-if="torneo.idEstado == 3" href="#/ReporteTorneo?idTorneo={{torneo.id}}" class="glyphicon glyphicon-blackboard" title="Reporte de Torneo"></a>
+                    </td>
+                    <td>{{torneo.nombre}}</td>
+                    <td>{{torneo.cantidadParticipantes}}</td>
+                    <td>{{torneo.cantidadContendores}}</td>
+                    <td>{{dateFormat(torneo.fechaInicio)}}</td>
+                    <td>{{dateFormat(torneo.fechaFin)}}</td>
+                    <td><span class="label label-{{getEstadoCss(torneo.idEstado)}}" style="font-size: inherit; display: flex;">{{getEstado(torneo.idEstado)}}</span></td>
+                </tr>
+                <tr class="animate-repeat" ng-if="torneos.length == 0">
+                    <td colspan="8">Sin torneos...</td>
+                </tr>
+            </tbody>
+        </table>
+        <div id="mymodal" title="Alerta" style="display: none;">
+            ¿Estás seguro de querer eliminar este torneo?
+        </div>
+    </div>
+</form>

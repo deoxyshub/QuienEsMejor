@@ -1,0 +1,53 @@
+﻿<div class="alert alert-info">
+    <h2>Modificar Perfíl</h2>
+</div>
+<div ng-show="error" class="alert alert-danger">{{error}}</div>
+<form name="form" ng-submit="modificarPerfil()" role="form">
+    <div class="form-group">
+        <label for="correo">Correo</label>
+        <i class="fa fa-key"></i>
+        <label class="form-control">{{usuario.correo}}</label>
+    </div>
+    <div class="form-group">
+        <label for="correo">Nombre</label>
+        <i class="fa fa-key"></i>
+        <input type="text" name="nombre" id="nombre" class="form-control" ng-model="usuario.nombre" required maxlength="100" />
+        <span ng-show="form.nombre.$dirty && form.nombre.$error.required" class="help-block">Nombre es requerido</span>
+    </div>
+    <div class="form-group">
+        <label for="correo">Apellido Paterno</label>
+        <i class="fa fa-key"></i>
+        <input type="text" name="apellidoPaterno" id="apellidoPaterno" class="form-control" ng-model="usuario.apellidoPaterno" required maxlength="50" />
+        <span ng-show="form.apellidoPaterno.$dirty && form.apellidoPaterno.$error.required" class="help-block">Apellido Paterno es requerido</span>
+    </div>
+    <div class="form-group">
+        <label for="correo">Apellido Materno</label>
+        <i class="fa fa-key"></i>
+        <input type="text" name="apellidoMaterno" id="apellidoMaterno" class="form-control" ng-model="usuario.apellidoMaterno" required maxlength="50" />
+        <span ng-show="form.apellidoMaterno.$dirty && form.apellidoMaterno.$error.required" class="help-block">Apellido Materno es requerido</span>
+    </div>
+    <div class="form-group">
+        <label for="sexo">Sexo</label>
+        <i class="fa fa-key"></i>
+        <select ng-model="usuario.sexo"
+                ng-options="item.value as item.key for item in sexos"
+                class="form-control"></select>
+    </div>
+    <div class="form-group">
+        <label for="celular">Celular</label>
+        <input type="text" name="celular" id="celular" class="form-control" ng-model="usuario.numeroCelular" maxlength="9" />
+    </div>
+    <div class="form-group">
+        <label for="telefono">Teléfono</label>
+        <input type="text" name="telefono" id="telefono" class="form-control" ng-model="usuario.numeroTelefono" maxlength="7" />
+    </div>
+    <div class="form-group">
+        <label for="fechaNacimiento">Fecha de Nacimiento</label>
+        <i class="fa fa-key"></i>
+        <input type="text" name="fechaNacimiento" id="fechaNacimiento" class="form-control" ng-model="usuario.fechaNacimiento" data-datepicker data-date-format="mm-dd"/>
+    </div>
+    <div class="form-actions">
+        <button type="submit" ng-disabled="form.$invalid || dataLoading" class="btn btn-danger">Modificar</button>
+        <img ng-if="dataLoading" src="data:image/gif;base64,R0lGODlhEAAQAPIAAP///wAAAMLCwkJCQgAAAGJiYoKCgpKSkiH/C05FVFNDQVBFMi4wAwEAAAAh/hpDcmVhdGVkIHdpdGggYWpheGxvYWQuaW5mbwAh+QQJCgAAACwAAAAAEAAQAAADMwi63P4wyklrE2MIOggZnAdOmGYJRbExwroUmcG2LmDEwnHQLVsYOd2mBzkYDAdKa+dIAAAh+QQJCgAAACwAAAAAEAAQAAADNAi63P5OjCEgG4QMu7DmikRxQlFUYDEZIGBMRVsaqHwctXXf7WEYB4Ag1xjihkMZsiUkKhIAIfkECQoAAAAsAAAAABAAEAAAAzYIujIjK8pByJDMlFYvBoVjHA70GU7xSUJhmKtwHPAKzLO9HMaoKwJZ7Rf8AYPDDzKpZBqfvwQAIfkECQoAAAAsAAAAABAAEAAAAzMIumIlK8oyhpHsnFZfhYumCYUhDAQxRIdhHBGqRoKw0R8DYlJd8z0fMDgsGo/IpHI5TAAAIfkECQoAAAAsAAAAABAAEAAAAzIIunInK0rnZBTwGPNMgQwmdsNgXGJUlIWEuR5oWUIpz8pAEAMe6TwfwyYsGo/IpFKSAAAh+QQJCgAAACwAAAAAEAAQAAADMwi6IMKQORfjdOe82p4wGccc4CEuQradylesojEMBgsUc2G7sDX3lQGBMLAJibufbSlKAAAh+QQJCgAAACwAAAAAEAAQAAADMgi63P7wCRHZnFVdmgHu2nFwlWCI3WGc3TSWhUFGxTAUkGCbtgENBMJAEJsxgMLWzpEAACH5BAkKAAAALAAAAAAQABAAAAMyCLrc/jDKSatlQtScKdceCAjDII7HcQ4EMTCpyrCuUBjCYRgHVtqlAiB1YhiCnlsRkAAAOwAAAAAAAAAAAA==" />
+    </div>
+</form>

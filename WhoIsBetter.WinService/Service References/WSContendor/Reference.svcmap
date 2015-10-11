@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="96c3c3cd-2de5-4d01-8674-769ec1fb7a4a" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings>
+      <CollectionMapping TypeName="System.Collections.Generic.List`1" Category="List" />
+    </CollectionMappings>
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>false</ReferenceAllAssemblies>
+    <ReferencedAssemblies>
+      <ReferencedAssembly AssemblyName="WhoIsBetter.Entity" />
+    </ReferencedAssemblies>
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost/WhoIsBetter_WSSOAP/ContendorService.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="ContendorService.xsd" MetadataType="Schema" ID="dd80766f-cf00-4df7-92bd-b1fa1bd3cfef" SourceId="1" SourceUrl="http://localhost/WhoIsBetter_WSSOAP/ContendorService.svc?xsd=xsd2" />
+    <MetadataFile FileName="ContendorService1.xsd" MetadataType="Schema" ID="904b3a36-f22c-470b-89c4-39538e3edcde" SourceId="1" SourceUrl="http://localhost/WhoIsBetter_WSSOAP/ContendorService.svc?xsd=xsd0" />
+    <MetadataFile FileName="ContendorService.disco" MetadataType="Disco" ID="97ed0e36-9f7a-48e8-bf9f-60fbe60ff5f5" SourceId="1" SourceUrl="http://localhost/WhoIsBetter_WSSOAP/ContendorService.svc?disco" />
+    <MetadataFile FileName="ContendorService.wsdl" MetadataType="Wsdl" ID="56cb30fa-4903-4a5d-9cd5-73f54910510d" SourceId="1" SourceUrl="http://localhost/WhoIsBetter_WSSOAP/ContendorService.svc?wsdl" />
+    <MetadataFile FileName="ContendorService2.xsd" MetadataType="Schema" ID="54e73c98-f7ef-4760-b08c-29623148d7db" SourceId="1" SourceUrl="http://localhost/WhoIsBetter_WSSOAP/ContendorService.svc?xsd=xsd1" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

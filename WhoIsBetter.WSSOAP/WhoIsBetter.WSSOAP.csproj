@@ -1,0 +1,160 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{4AD7708C-23BB-49E7-BE09-3D4F6A178365}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>WhoIsBetter.WSSOAP</RootNamespace>
+    <AssemblyName>WhoIsBetter.WSSOAP</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <WcfConfigValidationEnabled>True</WcfConfigValidationEnabled>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <UseIISExpress>false</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Messaging" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Service References\WSTorneo\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="UsuarioService.svc.cs">
+      <DependentUpon>UsuarioService.svc</DependentUpon>
+    </Compile>
+    <Compile Include="ReporteService.svc.cs">
+      <DependentUpon>ReporteService.svc</DependentUpon>
+    </Compile>
+    <Compile Include="FavoritoService.svc.cs">
+      <DependentUpon>FavoritoService.svc</DependentUpon>
+    </Compile>
+    <Compile Include="ParticipanteService.svc.cs">
+      <DependentUpon>ParticipanteService.svc</DependentUpon>
+    </Compile>
+    <Compile Include="Interface\IContendorService.cs" />
+    <Compile Include="Interface\IFavoritoService.cs" />
+    <Compile Include="Interface\IParticipanteService.cs" />
+    <Compile Include="Interface\IReporteService.cs" />
+    <Compile Include="Interface\IUsuarioService.cs" />
+    <Content Include="Properties\DataSources\WhoIsBetter.Entity.Contendor.datasource" />
+    <Content Include="Properties\DataSources\WhoIsBetter.Entity.Torneo.datasource" />
+    <Content Include="Properties\DataSources\WhoIsBetter.Entity.Duelo.datasource" />
+    <Content Include="Properties\DataSources\WhoIsBetter.Entity.Favorito.datasource" />
+    <None Include="Service References\WSTorneo\TorneoService.disco" />
+    <None Include="Service References\WSTorneo\configuration91.svcinfo" />
+    <None Include="Service References\WSTorneo\configuration.svcinfo" />
+    <None Include="Service References\WSTorneo\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <Content Include="UsuarioService.svc" />
+    <Content Include="ReporteService.svc" />
+    <Content Include="FavoritoService.svc" />
+    <Content Include="ParticipanteService.svc" />
+    <Content Include="ContendorService.svc" />
+    <Content Include="TorneoService.svc" />
+    <Compile Include="Utility\Validador.cs" />
+    <Content Include="Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Interface\ITorneoService.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ContendorService.svc.cs">
+      <DependentUpon>ContendorService.svc</DependentUpon>
+    </Compile>
+    <Compile Include="TorneoService.svc.cs">
+      <DependentUpon>TorneoService.svc</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\WSTorneo\TorneoService.wsdl" />
+    <None Include="Service References\WSTorneo\TorneoService.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\WSTorneo\TorneoService1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\WSTorneo\TorneoService2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\WhoIsBetter.DataAccess\WhoIsBetter.DataAccess.csproj">
+      <Project>{85c45bb6-285b-4ad4-a6a2-23e9801a188b}</Project>
+      <Name>WhoIsBetter.DataAccess</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\WhoIsBetter.Entity\WhoIsBetter.Entity.csproj">
+      <Project>{2fbcb9de-6a3d-48e2-acb1-03addd417547}</Project>
+      <Name>WhoIsBetter.Entity</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Service References\WSTorneo\" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <SaveServerSettingsInUserFile>True</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

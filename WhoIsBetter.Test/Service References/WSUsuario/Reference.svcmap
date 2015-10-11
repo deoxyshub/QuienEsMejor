@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="07a6736b-328b-43bf-ab85-b0a108998294" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings>
+      <CollectionMapping TypeName="System.Collections.Generic.List`1" Category="List" />
+    </CollectionMappings>
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>false</ReferenceAllAssemblies>
+    <ReferencedAssemblies>
+      <ReferencedAssembly AssemblyName="WhoIsBetter.Entity" />
+    </ReferencedAssemblies>
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost/WhoIsBetter_WSSOAP/UsuarioService.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="UsuarioService.xsd" MetadataType="Schema" ID="c3bc7475-aacd-4906-b47b-a0f89528abac" SourceId="1" SourceUrl="http://localhost/WhoIsBetter_WSSOAP/UsuarioService.svc?xsd=xsd2" />
+    <MetadataFile FileName="UsuarioService.disco" MetadataType="Disco" ID="dd3e199e-83c1-4df0-96c7-6c5cb825fded" SourceId="1" SourceUrl="http://localhost/WhoIsBetter_WSSOAP/UsuarioService.svc?disco" />
+    <MetadataFile FileName="UsuarioService1.xsd" MetadataType="Schema" ID="019813b9-74d8-4e79-b3fd-d97f575304eb" SourceId="1" SourceUrl="http://localhost/WhoIsBetter_WSSOAP/UsuarioService.svc?xsd=xsd1" />
+    <MetadataFile FileName="UsuarioService2.xsd" MetadataType="Schema" ID="35617b41-ced9-4fbb-8d5f-4737af898fb9" SourceId="1" SourceUrl="http://localhost/WhoIsBetter_WSSOAP/UsuarioService.svc?xsd=xsd0" />
+    <MetadataFile FileName="UsuarioService.wsdl" MetadataType="Wsdl" ID="c8244971-6972-4607-b8bb-bb54e8d93361" SourceId="1" SourceUrl="http://localhost/WhoIsBetter_WSSOAP/UsuarioService.svc?wsdl" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

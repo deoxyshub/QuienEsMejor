@@ -1,0 +1,65 @@
+﻿<div class="alert alert-info">
+    <h2>Vota por tu Favorito</h2>
+</div>
+<div ng-show="error" class="alert alert-danger">{{error}}</div>
+<form name="form" ng-submit="votar()" role="form" class="form-horizontal">
+    <div class="form-group">
+        <label for="torneo" class="col-sm-1 control-label">Torneo</label>
+        <div class="col-sm-11">
+            <input type="text" name="torneo" id="torneo" class="form-control" ng-model="nombreTorneo" readonly />
+        </div>    
+    </div>
+    <div class="form-group col-sm-3 text-center">
+        <label>{{opcion1}}: {{nombreContendor1}}</label>
+        <div ng-bind-html="getHTML(imagenContendor1)"></div>
+        <label for="marcaOpt1" class="radio inline" style="font-weight:normal;"><input type="radio" id="marcaOpt1" value="1" name="marcaOpt" ng-model="marcaOpt" ng-required="!marcaOpt">elegir</label>
+    </div>
+    <div class="form-group col-sm-1 text-center" style="padding-top: 84px;">
+        <span>VS</span>
+    </div>
+    <div class="form-group col-sm-3 text-center">
+        <label>{{opcion2}}: {{nombreContendor2}}</label>
+        <div ng-bind-html="getHTML(imagenContendor2)"></div>
+        <label for="marcaOpt2" class="radio inline" style="font-weight:normal;"><input type="radio" id="marcaOpt2" value="2" name="marcaOpt" ng-model="marcaOpt" ng-required="!marcaOpt">elegir</label>
+    </div>
+    <div class="form-group col-sm-4">
+        <div ng-init="etapas = []" style="float: right;">
+            <label>Etapa actual</label>
+            <ul style="width: 180px; border: 1px solid #ccc; min-height: 140px; list-style-type: none; padding: 0px;">
+                <li ng-repeat="etapa in etapas">
+                    {{etapa}}
+                </li>
+                <li ng-if="etapas.length == 0">
+                    Sin resultados
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="clearfix"></div>
+    <div class="form-actions col-sm-6 text-center">
+        <span>Elige a tu favorito</span><br /><br />
+        <button type="submit" ng-disabled="form.$invalid || dataLoading" class="btn btn-danger">Confirmar - Siguiente duelo</button>
+        <img ng-if="dataLoading" src="data:image/gif;base64,R0lGODlhEAAQAPIAAP///wAAAMLCwkJCQgAAAGJiYoKCgpKSkiH/C05FVFNDQVBFMi4wAwEAAAAh/hpDcmVhdGVkIHdpdGggYWpheGxvYWQuaW5mbwAh+QQJCgAAACwAAAAAEAAQAAADMwi63P4wyklrE2MIOggZnAdOmGYJRbExwroUmcG2LmDEwnHQLVsYOd2mBzkYDAdKa+dIAAAh+QQJCgAAACwAAAAAEAAQAAADNAi63P5OjCEgG4QMu7DmikRxQlFUYDEZIGBMRVsaqHwctXXf7WEYB4Ag1xjihkMZsiUkKhIAIfkECQoAAAAsAAAAABAAEAAAAzYIujIjK8pByJDMlFYvBoVjHA70GU7xSUJhmKtwHPAKzLO9HMaoKwJZ7Rf8AYPDDzKpZBqfvwQAIfkECQoAAAAsAAAAABAAEAAAAzMIumIlK8oyhpHsnFZfhYumCYUhDAQxRIdhHBGqRoKw0R8DYlJd8z0fMDgsGo/IpHI5TAAAIfkECQoAAAAsAAAAABAAEAAAAzIIunInK0rnZBTwGPNMgQwmdsNgXGJUlIWEuR5oWUIpz8pAEAMe6TwfwyYsGo/IpFKSAAAh+QQJCgAAACwAAAAAEAAQAAADMwi6IMKQORfjdOe82p4wGccc4CEuQradylesojEMBgsUc2G7sDX3lQGBMLAJibufbSlKAAAh+QQJCgAAACwAAAAAEAAQAAADMgi63P7wCRHZnFVdmgHu2nFwlWCI3WGc3TSWhUFGxTAUkGCbtgENBMJAEJsxgMLWzpEAACH5BAkKAAAALAAAAAAQABAAAAMyCLrc/jDKSatlQtScKdceCAjDII7HcQ4EMTCpyrCuUBjCYRgHVtqlAiB1YhiCnlsRkAAAOwAAAAAAAAAAAA==" />
+    </div>
+</form>
+
+<div id="inscripcion" title="Inscribirse" style="display: none;">
+    <form name="form1" ng-submit="inscribirse()" role="form" class="form-horizontal">
+        <div class="form-group">
+            <label for="correo">Correo</label>
+            <i class="fa fa-key"></i>
+            <input type="text" name="correo" id="correo" class="form-control" ng-model="correo" required maxlength="50" />
+            <span ng-show="form1.correo.$dirty && form1.correo.$error.required" class="help-block">Correo es requerido</span>
+        </div>
+        <div class="form-group">
+            <label for="correo">Nombre</label>
+            <i class="fa fa-key"></i>
+            <input type="text" name="nombre" id="nombre" class="form-control" ng-model="nombre" required maxlength="100" />
+            <span ng-show="form1.nombre.$dirty && form1.nombre.$error.required" class="help-block">Nombre es requerido</span>
+        </div>
+        <div class="form-actions text-right">
+            <button type="submit" ng-disabled="form1.$invalid || dataLoading1" class="btn btn-danger">Inscribirse</button>
+            <img ng-if="dataLoading1" src="data:image/gif;base64,R0lGODlhEAAQAPIAAP///wAAAMLCwkJCQgAAAGJiYoKCgpKSkiH/C05FVFNDQVBFMi4wAwEAAAAh/hpDcmVhdGVkIHdpdGggYWpheGxvYWQuaW5mbwAh+QQJCgAAACwAAAAAEAAQAAADMwi63P4wyklrE2MIOggZnAdOmGYJRbExwroUmcG2LmDEwnHQLVsYOd2mBzkYDAdKa+dIAAAh+QQJCgAAACwAAAAAEAAQAAADNAi63P5OjCEgG4QMu7DmikRxQlFUYDEZIGBMRVsaqHwctXXf7WEYB4Ag1xjihkMZsiUkKhIAIfkECQoAAAAsAAAAABAAEAAAAzYIujIjK8pByJDMlFYvBoVjHA70GU7xSUJhmKtwHPAKzLO9HMaoKwJZ7Rf8AYPDDzKpZBqfvwQAIfkECQoAAAAsAAAAABAAEAAAAzMIumIlK8oyhpHsnFZfhYumCYUhDAQxRIdhHBGqRoKw0R8DYlJd8z0fMDgsGo/IpHI5TAAAIfkECQoAAAAsAAAAABAAEAAAAzIIunInK0rnZBTwGPNMgQwmdsNgXGJUlIWEuR5oWUIpz8pAEAMe6TwfwyYsGo/IpFKSAAAh+QQJCgAAACwAAAAAEAAQAAADMwi6IMKQORfjdOe82p4wGccc4CEuQradylesojEMBgsUc2G7sDX3lQGBMLAJibufbSlKAAAh+QQJCgAAACwAAAAAEAAQAAADMgi63P7wCRHZnFVdmgHu2nFwlWCI3WGc3TSWhUFGxTAUkGCbtgENBMJAEJsxgMLWzpEAACH5BAkKAAAALAAAAAAQABAAAAMyCLrc/jDKSatlQtScKdceCAjDII7HcQ4EMTCpyrCuUBjCYRgHVtqlAiB1YhiCnlsRkAAAOwAAAAAAAAAAAA==" />
+        </div>
+    </form>
+</div>

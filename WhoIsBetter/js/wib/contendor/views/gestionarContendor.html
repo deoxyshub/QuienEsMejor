@@ -1,0 +1,38 @@
+﻿<div class="alert alert-info">
+    <h2>{{mode === 'edit' ? 'Modificar Contendor' : 'Agregar Contendor'}}</h2>
+</div>
+<div ng-show="error" class="alert alert-danger">{{error}}</div>
+<form name="form" ng-submit="guardarContendor()" role="form">
+    <div class="form-group">
+        <label for="correo">Nombre</label>
+        <i class="fa fa-key"></i>
+        <input type="text" name="nombre" id="nombre" class="form-control" ng-model="nombre" required maxlength="100" />
+        <span ng-show="form.nombre.$dirty && form.nombre.$error.required" class="help-block">Nombre es requerido</span>
+    </div>
+    <div class="form-group">
+        <label for="texto">Texto</label>
+        <i class="fa fa-key"></i>
+        <input type="text" name="texto" id="texto" class="form-control" ng-model="texto" required />
+        <span ng-show="form.texto.$dirty && form.texto.$error.required" class="help-block">Texto es requerido</span>
+    </div>
+    <div class="form-group" style="position:relative; height: 132px">
+        <label for="imagen">Imagen</label>
+        <i class="fa fa-key"></i>
+        <div class="image-preview" style="{{imageAsBackground(imagen)}}">
+            <input type="file" nv-file-select="" uploader="uploader" />
+        </div>
+        <div ng-repeat="item in uploader.queue" class="row">
+            <div class="col-sm-2">
+                <div ng-show="uploader.isHTML5" ng-thumb="{ file: item._file, height: 100 }"></div>
+            </div>
+            <div class="col-sm-3">
+                <strong>{{ item.file.name }}</strong>
+                <div ng-show="uploader.isHTML5" nowrap>{{ item.file.size/1024/1024|number:2 }} MB</div>
+            </div>
+        </div>
+    </div>
+    <div class="form-actions">
+        <button type="submit" ng-disabled="form.$invalid || dataLoading || item.isReady || item.isUploading || item.isSuccess" class="btn btn-danger">{{mode === 'edit' ? 'modificar' : 'agregar'}}</button>
+        <img ng-if="dataLoading" src="data:image/gif;base64,R0lGODlhEAAQAPIAAP///wAAAMLCwkJCQgAAAGJiYoKCgpKSkiH/C05FVFNDQVBFMi4wAwEAAAAh/hpDcmVhdGVkIHdpdGggYWpheGxvYWQuaW5mbwAh+QQJCgAAACwAAAAAEAAQAAADMwi63P4wyklrE2MIOggZnAdOmGYJRbExwroUmcG2LmDEwnHQLVsYOd2mBzkYDAdKa+dIAAAh+QQJCgAAACwAAAAAEAAQAAADNAi63P5OjCEgG4QMu7DmikRxQlFUYDEZIGBMRVsaqHwctXXf7WEYB4Ag1xjihkMZsiUkKhIAIfkECQoAAAAsAAAAABAAEAAAAzYIujIjK8pByJDMlFYvBoVjHA70GU7xSUJhmKtwHPAKzLO9HMaoKwJZ7Rf8AYPDDzKpZBqfvwQAIfkECQoAAAAsAAAAABAAEAAAAzMIumIlK8oyhpHsnFZfhYumCYUhDAQxRIdhHBGqRoKw0R8DYlJd8z0fMDgsGo/IpHI5TAAAIfkECQoAAAAsAAAAABAAEAAAAzIIunInK0rnZBTwGPNMgQwmdsNgXGJUlIWEuR5oWUIpz8pAEAMe6TwfwyYsGo/IpFKSAAAh+QQJCgAAACwAAAAAEAAQAAADMwi6IMKQORfjdOe82p4wGccc4CEuQradylesojEMBgsUc2G7sDX3lQGBMLAJibufbSlKAAAh+QQJCgAAACwAAAAAEAAQAAADMgi63P7wCRHZnFVdmgHu2nFwlWCI3WGc3TSWhUFGxTAUkGCbtgENBMJAEJsxgMLWzpEAACH5BAkKAAAALAAAAAAQABAAAAMyCLrc/jDKSatlQtScKdceCAjDII7HcQ4EMTCpyrCuUBjCYRgHVtqlAiB1YhiCnlsRkAAAOwAAAAAAAAAAAA==" />
+    </div>
+</form>

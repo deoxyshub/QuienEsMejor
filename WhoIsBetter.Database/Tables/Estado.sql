@@ -1,0 +1,10 @@
+﻿CREATE TABLE [dbo].[Estado]
+(
+	[ID] INT NOT NULL,
+	[Descripcion] NVARCHAR(100) NOT NULL,
+
+	CONSTRAINT [PK_Estado] PRIMARY KEY CLUSTERED 
+	(
+		[ID] ASC
+	)
+)

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="770e8e8f-eebd-429b-a7e9-ae43dab5902c" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings>
+      <CollectionMapping TypeName="System.Collections.Generic.List`1" Category="List" />
+    </CollectionMappings>
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>false</ReferenceAllAssemblies>
+    <ReferencedAssemblies>
+      <ReferencedAssembly AssemblyName="WhoIsBetter.Entity" />
+    </ReferencedAssemblies>
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost/WhoIsBetter_WSSOAP/FavoritoService.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="FavoritoService.xsd" MetadataType="Schema" ID="94d7efc3-041d-4745-845a-1855427af958" SourceId="1" SourceUrl="http://localhost/WhoIsBetter_WSSOAP/FavoritoService.svc?xsd=xsd2" />
+    <MetadataFile FileName="FavoritoService.disco" MetadataType="Disco" ID="e0581efe-0513-4128-9abd-458899320c6f" SourceId="1" SourceUrl="http://localhost/WhoIsBetter_WSSOAP/FavoritoService.svc?disco" />
+    <MetadataFile FileName="FavoritoService.wsdl" MetadataType="Wsdl" ID="4247f9c4-c320-4446-9b83-010c54fa68d3" SourceId="1" SourceUrl="http://localhost/WhoIsBetter_WSSOAP/FavoritoService.svc?wsdl" />
+    <MetadataFile FileName="FavoritoService1.xsd" MetadataType="Schema" ID="5ead7a1d-8349-432d-b3a5-d32f45f00bff" SourceId="1" SourceUrl="http://localhost/WhoIsBetter_WSSOAP/FavoritoService.svc?xsd=xsd1" />
+    <MetadataFile FileName="FavoritoService2.xsd" MetadataType="Schema" ID="c979aa56-187d-44ce-a9cc-a43f4f89055c" SourceId="1" SourceUrl="http://localhost/WhoIsBetter_WSSOAP/FavoritoService.svc?xsd=xsd0" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

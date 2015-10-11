@@ -1,0 +1,47 @@
+﻿<div class="alert alert-info">
+    <h2>{{mode === 'edit' ? 'Modificar Torneo' : 'Agregar Torneo'}}</h2>
+</div>
+<div ng-show="error" class="alert alert-danger">{{error}}</div>
+<form name="form" ng-submit="guardarTorneo()" role="form">
+    <div class="form-group">
+        <label for="enlace">Enlace</label>
+        <i class="fa fa-key"></i>
+        <input type="url" name="enlace" id="enlace" class="form-control" ng-model="enlace" required maxlength="300" readonly />
+        <span ng-show="form.enlace.$dirty && form.enlace.$error.required" class="help-block">Enlace es requerido</span>
+        <span ng-show="form.enlace.$error.url" class="help-block">Enlace mal formateado</span>
+    </div>
+    <div class="form-group">
+        <label for="correo">Nombre</label>
+        <i class="fa fa-key"></i>
+        <input type="text" name="nombre" id="nombre" class="form-control" ng-model="nombre" required maxlength="100" ng-keyup="onKeyUp()" />
+        <span ng-show="form.nombre.$dirty && form.nombre.$error.required" class="help-block">Nombre es requerido</span>
+    </div>
+    <div class="form-group">
+        <label for="cantidadParticipantes">Cantidad Participantes</label>
+        <i class="fa fa-key"></i>
+        <input type="text" name="cantidadParticipantes" id="cantidadParticipantes" ng-model="cantidadParticipantes" data-spinner required />
+        <span ng-show="form.cantidadParticipantes.$dirty && form.cantidadParticipantes.$error.required" class="help-block">Cantidad Participantes es requerido</span>
+    </div>
+    <div class="form-group">
+        <label for="cantidadContendores">Cantidad Contendores</label>
+        <i class="fa fa-key"></i>
+        <input type="text" name="cantidadContendores" id="cantidadContendores" ng-model="cantidadContendores" data-spinner required />
+        <span ng-show="form.cantidadContendores.$dirty && form.cantidadContendores.$error.required" class="help-block">Cantidad Contendores es requerido</span>
+    </div>
+    <div class="form-group">
+        <label for="fechaInicio">Fecha Inicio</label>
+        <i class="fa fa-key"></i>
+        <input type="text" name="fechaInicio" id="fechaInicio" class="form-control" ng-model="fechaInicio" data-datepicker required />
+        <span ng-show="form.fechaInicio.$dirty && form.fechaInicio.$error.required" class="help-block">Fecha Inicio es requerido</span>
+    </div>
+    <div class="form-group">
+        <label for="fechaFin">Fecha Fin</label>
+        <i class="fa fa-key"></i>
+        <input type="text" name="fechaFin" id="fechaFin" class="form-control" ng-model="fechaFin" data-datepicker required />
+        <span ng-show="form.fechaFin.$dirty && form.fechaFin.$error.required" class="help-block">Fecha Fin es requerido</span>
+    </div>
+    <div class="form-actions">
+        <button type="submit" ng-disabled="form.$invalid || dataLoading" class="btn btn-danger">{{mode === 'edit' ? 'modificar' : 'agregar'}}</button>
+        <img ng-if="dataLoading" src="data:image/gif;base64,R0lGODlhEAAQAPIAAP///wAAAMLCwkJCQgAAAGJiYoKCgpKSkiH/C05FVFNDQVBFMi4wAwEAAAAh/hpDcmVhdGVkIHdpdGggYWpheGxvYWQuaW5mbwAh+QQJCgAAACwAAAAAEAAQAAADMwi63P4wyklrE2MIOggZnAdOmGYJRbExwroUmcG2LmDEwnHQLVsYOd2mBzkYDAdKa+dIAAAh+QQJCgAAACwAAAAAEAAQAAADNAi63P5OjCEgG4QMu7DmikRxQlFUYDEZIGBMRVsaqHwctXXf7WEYB4Ag1xjihkMZsiUkKhIAIfkECQoAAAAsAAAAABAAEAAAAzYIujIjK8pByJDMlFYvBoVjHA70GU7xSUJhmKtwHPAKzLO9HMaoKwJZ7Rf8AYPDDzKpZBqfvwQAIfkECQoAAAAsAAAAABAAEAAAAzMIumIlK8oyhpHsnFZfhYumCYUhDAQxRIdhHBGqRoKw0R8DYlJd8z0fMDgsGo/IpHI5TAAAIfkECQoAAAAsAAAAABAAEAAAAzIIunInK0rnZBTwGPNMgQwmdsNgXGJUlIWEuR5oWUIpz8pAEAMe6TwfwyYsGo/IpFKSAAAh+QQJCgAAACwAAAAAEAAQAAADMwi6IMKQORfjdOe82p4wGccc4CEuQradylesojEMBgsUc2G7sDX3lQGBMLAJibufbSlKAAAh+QQJCgAAACwAAAAAEAAQAAADMgi63P7wCRHZnFVdmgHu2nFwlWCI3WGc3TSWhUFGxTAUkGCbtgENBMJAEJsxgMLWzpEAACH5BAkKAAAALAAAAAAQABAAAAMyCLrc/jDKSatlQtScKdceCAjDII7HcQ4EMTCpyrCuUBjCYRgHVtqlAiB1YhiCnlsRkAAAOwAAAAAAAAAAAA==" />
+    </div>
+</form>

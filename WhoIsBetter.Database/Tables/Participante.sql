@@ -1,0 +1,12 @@
+﻿CREATE TABLE [dbo].[Participante]
+(
+	[ID] INT IDENTITY(1,1) NOT NULL,
+	[Correo] NVARCHAR(50) NOT NULL,
+	[Nombre] NVARCHAR(100) NOT NULL,
+
+	CONSTRAINT [PK_Participante] PRIMARY KEY CLUSTERED 
+	(
+		[ID] ASC
+	)
+)
+GO

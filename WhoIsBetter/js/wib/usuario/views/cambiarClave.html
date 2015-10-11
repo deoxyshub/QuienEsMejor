@@ -1,0 +1,27 @@
+﻿<div class="alert alert-info">
+    <h2>Cambiar Clave</h2>
+</div>
+<div ng-show="error" class="alert alert-danger">{{error}}</div>
+<form name="form" ng-submit="cambiarClave()" role="form">
+    <div class="form-group">
+        <label for="correo">Correo</label>
+        <i class="fa fa-key"></i>
+        <label class="form-control">{{correo}}</label>
+    </div>
+    <div class="form-group">
+        <label for="newClave">Contraseña</label>
+        <i class="fa fa-lock"></i>
+        <input type="password" name="newClave" id="newClave" class="form-control" ng-model="newClave" required maxlength="6" />
+        <span ng-show="form.newClave.$dirty && form.newClave.$error.required" class="help-block">Contraseña es requerida</span>
+    </div>
+    <div class="form-group">
+        <label for="confirmarClave">Confirmar Contraseña</label>
+        <i class="fa fa-lock"></i>
+        <input type="password" name="confirmarClave" id="confirmarClave" class="form-control" ng-model="confirmarClave" required data-password-verify="newClave" maxlength="6"/>
+        <span ng-show="form.confirmarClave.$dirty && form.confirmarClave.$error.passwordVerify" class="help-block">Contraseñas no son iguales</span>
+    </div>
+    <div class="form-actions">
+        <button type="submit" ng-disabled="form.$invalid || dataLoading" class="btn btn-danger">Cambiar</button>
+        <img ng-if="dataLoading" src="data:image/gif;base64,R0lGODlhEAAQAPIAAP///wAAAMLCwkJCQgAAAGJiYoKCgpKSkiH/C05FVFNDQVBFMi4wAwEAAAAh/hpDcmVhdGVkIHdpdGggYWpheGxvYWQuaW5mbwAh+QQJCgAAACwAAAAAEAAQAAADMwi63P4wyklrE2MIOggZnAdOmGYJRbExwroUmcG2LmDEwnHQLVsYOd2mBzkYDAdKa+dIAAAh+QQJCgAAACwAAAAAEAAQAAADNAi63P5OjCEgG4QMu7DmikRxQlFUYDEZIGBMRVsaqHwctXXf7WEYB4Ag1xjihkMZsiUkKhIAIfkECQoAAAAsAAAAABAAEAAAAzYIujIjK8pByJDMlFYvBoVjHA70GU7xSUJhmKtwHPAKzLO9HMaoKwJZ7Rf8AYPDDzKpZBqfvwQAIfkECQoAAAAsAAAAABAAEAAAAzMIumIlK8oyhpHsnFZfhYumCYUhDAQxRIdhHBGqRoKw0R8DYlJd8z0fMDgsGo/IpHI5TAAAIfkECQoAAAAsAAAAABAAEAAAAzIIunInK0rnZBTwGPNMgQwmdsNgXGJUlIWEuR5oWUIpz8pAEAMe6TwfwyYsGo/IpFKSAAAh+QQJCgAAACwAAAAAEAAQAAADMwi6IMKQORfjdOe82p4wGccc4CEuQradylesojEMBgsUc2G7sDX3lQGBMLAJibufbSlKAAAh+QQJCgAAACwAAAAAEAAQAAADMgi63P7wCRHZnFVdmgHu2nFwlWCI3WGc3TSWhUFGxTAUkGCbtgENBMJAEJsxgMLWzpEAACH5BAkKAAAALAAAAAAQABAAAAMyCLrc/jDKSatlQtScKdceCAjDII7HcQ4EMTCpyrCuUBjCYRgHVtqlAiB1YhiCnlsRkAAAOwAAAAAAAAAAAA==" />
+    </div>
+</form>

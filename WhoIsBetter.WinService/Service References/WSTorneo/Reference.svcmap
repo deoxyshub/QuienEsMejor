@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="225e35a7-566d-47aa-b61b-1be4bdc55e8d" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings>
+      <CollectionMapping TypeName="System.Collections.Generic.List`1" Category="List" />
+    </CollectionMappings>
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>false</ReferenceAllAssemblies>
+    <ReferencedAssemblies>
+      <ReferencedAssembly AssemblyName="WhoIsBetter.Entity" />
+    </ReferencedAssemblies>
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost/WhoIsBetter_WSSOAP/TorneoService.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="TorneoService.disco" MetadataType="Disco" ID="dd3bd783-ba8e-4c3c-a42d-db499df20946" SourceId="1" SourceUrl="http://localhost/WhoIsBetter_WSSOAP/TorneoService.svc?disco" />
+    <MetadataFile FileName="TorneoService.xsd" MetadataType="Schema" ID="fadb37b1-c587-4c6f-8f01-a736f9223501" SourceId="1" SourceUrl="http://localhost/WhoIsBetter_WSSOAP/TorneoService.svc?xsd=xsd0" />
+    <MetadataFile FileName="TorneoService1.xsd" MetadataType="Schema" ID="3d5c9e2e-0f1f-4f37-bbdd-6d29a5c96b40" SourceId="1" SourceUrl="http://localhost/WhoIsBetter_WSSOAP/TorneoService.svc?xsd=xsd1" />
+    <MetadataFile FileName="TorneoService2.xsd" MetadataType="Schema" ID="bc5252d1-34c9-4068-9e0f-a2da51aced16" SourceId="1" SourceUrl="http://localhost/WhoIsBetter_WSSOAP/TorneoService.svc?xsd=xsd2" />
+    <MetadataFile FileName="TorneoService.wsdl" MetadataType="Wsdl" ID="7ef7564b-723d-4699-90a5-40807087325e" SourceId="1" SourceUrl="http://localhost/WhoIsBetter_WSSOAP/TorneoService.svc?wsdl" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

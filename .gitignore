@@ -1,0 +1,21 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/.vs/WhoIsBetter/v14
+/WhoIsBetter/bin
+/WhoIsBetter.DataAccess/bin/Debug
+/WhoIsBetter.DataAccess/obj/Debug
+/WhoIsBetter.Database/bin/Debug
+/WhoIsBetter.Database/obj/Debug
+/WhoIsBetter.Database/WhoIsBetter.Database.refactorlog
+/WhoIsBetter.Entity/bin/Debug
+/WhoIsBetter.Entity/obj/Debug
+/WhoIsBetter.Test/bin/Debug
+/WhoIsBetter.Test/obj/Debug
+/WhoIsBetter.WinService/bin/Debug
+/WhoIsBetter.WinService/obj/Debug
+/WhoIsBetter.WSREST/bin
+/WhoIsBetter.WSREST/obj/Debug
+/WhoIsBetter.WSSOAP/bin
+/WhoIsBetter.WSSOAP/obj/Debug

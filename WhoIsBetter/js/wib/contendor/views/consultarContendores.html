@@ -1,0 +1,46 @@
+﻿<div class="alert alert-info">
+    <h2>Contendores</h2>
+    <p class="row">
+        <a href="#/ModificarPerfil?idUsuario={{idUsuario}}" class="btn btn-link">modificar perfil</a>
+        <a href="#/CambiarClave?idUsuario={{idUsuario}}" class="btn btn-link">cambiar de clave</a>
+        <a href="#/IniciarSesion" class="btn btn-link">cerrar sesión</a>
+    </p>
+</div>
+<div ng-show="error" class="alert alert-danger">{{error}}</div>
+<form name="form" role="form">
+    <div class="btn-toolbar pull-left">
+        <a href="#/GestionarContendor?idTorneo={{idTorneo}}&mode=new" class="btn btn-small btn-primary">agregar</a>
+    </div>
+    <div class="clearfix"></div>
+    <div class="form-group" style="margin-top: 5px;">
+        <table class="table table-bordered table-striped">
+            <thead>
+                <tr>
+                    <th style="width: 185px;"></th>
+                    <th>Contendor</th>
+                    <th style="width: 65px;">Texto</th>
+                    <th style="width: 65px;">Imagen</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="animate-repeat" ng-repeat="contendor in contendores">
+                    <td>
+                        <a href="#/GestionarContendor?idContendor={{contendor.id}}&mode=edit" class="glyphicon glyphicon-edit" title="Modificar Contendor"></a>
+                        <span style="line-height: 16px; height: 12px; vertical-align: top;">&nbsp;|&nbsp;</span>
+                        <a class="glyphicon glyphicon-remove" style="cursor: pointer;" open-dialog="mymodal" data-entityid="{{contendor.id}}" title="Eliminar Contendor"></a>
+                        <span style="line-height: 16px; height: 12px; vertical-align: top;">&nbsp;|&nbsp;</span>
+                    </td>
+                    <td>{{contendor.nombre}}</td>
+                    <td>{{contendor.texto}}</td>
+                    <td style="padding: 0px; text-align: center;" ng-bind-html="getHTML(contendor.imagen)"></td>
+                </tr>
+                <tr class="animate-repeat" ng-if="torneos.length == 0">
+                    <td colspan="8">Sin contendores...</td>
+                </tr>
+            </tbody>
+        </table>
+        <div id="mymodal" title="Alerta" style="display: none;">
+            ¿Estás seguro de querer eliminar este contendor?
+        </div>
+    </div>
+</form>

@@ -1,0 +1,47 @@
+﻿<div class="alert alert-info">
+    <h2>Regístrate</h2>
+</div>
+<div ng-show="error" class="alert alert-danger">{{error}}</div>
+<form name="form" ng-submit="registrarCuenta()" role="form">
+    <div class="form-group">
+        <label for="correo">Correo</label>
+        <i class="fa fa-key"></i>
+        <input type="text" name="correo" id="correo" class="form-control" ng-model="correo" required maxlength="50" />
+        <span ng-show="form.correo.$dirty && form.correo.$error.required" class="help-block">Correo es requerido</span>
+    </div>
+    <div class="form-group">
+        <label for="correo">Nombre</label>
+        <i class="fa fa-key"></i>
+        <input type="text" name="nombre" id="nombre" class="form-control" ng-model="nombre" required maxlength="100" />
+        <span ng-show="form.nombre.$dirty && form.nombre.$error.required" class="help-block">Nombre es requerido</span>
+    </div>
+    <div class="form-group">
+        <label for="correo">Apellido Paterno</label>
+        <i class="fa fa-key"></i>
+        <input type="text" name="apellidoPaterno" id="apellidoPaterno" class="form-control" ng-model="apellidoPaterno" required maxlength="50" />
+        <span ng-show="form.apellidoPaterno.$dirty && form.apellidoPaterno.$error.required" class="help-block">Apellido Paterno es requerido</span>
+    </div>
+    <div class="form-group">
+        <label for="correo">Apellido Materno</label>
+        <i class="fa fa-key"></i>
+        <input type="text" name="apellidoMaterno" id="apellidoMaterno" class="form-control" ng-model="apellidoMaterno" required maxlength="50" />
+        <span ng-show="form.apellidoMaterno.$dirty && form.apellidoMaterno.$error.required" class="help-block">Apellido Materno es requerido</span>
+    </div>
+    <div class="form-group">
+        <label for="clave">Contraseña</label>
+        <i class="fa fa-lock"></i>
+        <input type="password" name="clave" id="clave" class="form-control" ng-model="clave" required maxlength="6" />
+        <span ng-show="form.clave.$dirty && form.clave.$error.required" class="help-block">Contraseña es requerida</span>
+    </div>
+    <div class="form-group">
+        <label for="confirmarClave">Confirmar Contraseña</label>
+        <i class="fa fa-lock"></i>
+        <input type="password" name="confirmarClave" id="confirmarClave" class="form-control" ng-model="confirmarClave" required data-password-verify="clave" maxlength="6"/>
+        <span ng-show="form.confirmarClave.$dirty && form.confirmarClave.$error.passwordVerify" class="help-block">Contraseñas no son iguales</span>
+    </div>
+    <div class="form-actions">
+        <button type="submit" ng-disabled="form.$invalid || dataLoading" class="btn btn-danger">Registrar</button>
+        <img ng-if="dataLoading" src="data:image/gif;base64,R0lGODlhEAAQAPIAAP///wAAAMLCwkJCQgAAAGJiYoKCgpKSkiH/C05FVFNDQVBFMi4wAwEAAAAh/hpDcmVhdGVkIHdpdGggYWpheGxvYWQuaW5mbwAh+QQJCgAAACwAAAAAEAAQAAADMwi63P4wyklrE2MIOggZnAdOmGYJRbExwroUmcG2LmDEwnHQLVsYOd2mBzkYDAdKa+dIAAAh+QQJCgAAACwAAAAAEAAQAAADNAi63P5OjCEgG4QMu7DmikRxQlFUYDEZIGBMRVsaqHwctXXf7WEYB4Ag1xjihkMZsiUkKhIAIfkECQoAAAAsAAAAABAAEAAAAzYIujIjK8pByJDMlFYvBoVjHA70GU7xSUJhmKtwHPAKzLO9HMaoKwJZ7Rf8AYPDDzKpZBqfvwQAIfkECQoAAAAsAAAAABAAEAAAAzMIumIlK8oyhpHsnFZfhYumCYUhDAQxRIdhHBGqRoKw0R8DYlJd8z0fMDgsGo/IpHI5TAAAIfkECQoAAAAsAAAAABAAEAAAAzIIunInK0rnZBTwGPNMgQwmdsNgXGJUlIWEuR5oWUIpz8pAEAMe6TwfwyYsGo/IpFKSAAAh+QQJCgAAACwAAAAAEAAQAAADMwi6IMKQORfjdOe82p4wGccc4CEuQradylesojEMBgsUc2G7sDX3lQGBMLAJibufbSlKAAAh+QQJCgAAACwAAAAAEAAQAAADMgi63P7wCRHZnFVdmgHu2nFwlWCI3WGc3TSWhUFGxTAUkGCbtgENBMJAEJsxgMLWzpEAACH5BAkKAAAALAAAAAAQABAAAAMyCLrc/jDKSatlQtScKdceCAjDII7HcQ4EMTCpyrCuUBjCYRgHVtqlAiB1YhiCnlsRkAAAOwAAAAAAAAAAAA==" />
+        <button type="button" class="btn btn-success" ng-click="iniciarSesion()">Iniciar Sesion</button>
+    </div>
+</form>

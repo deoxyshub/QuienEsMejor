@@ -1,0 +1,10 @@
+﻿CREATE TABLE [dbo].[Rol]
+(
+	[ID] INT NOT NULL,
+	[Nombre] NVARCHAR(100) NOT NULL,
+
+	CONSTRAINT [PK_Rol] PRIMARY KEY CLUSTERED 
+	(
+		[ID] ASC
+	)
+)
